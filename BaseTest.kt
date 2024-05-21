@@ -53,7 +53,7 @@ open class BaseTest {
         private set
 
     private var activityScenario: ActivityScenario<MainActivity>? = null
-    private var handler: DescriptionFailureHandler? = null
+    var handler: DescriptionFailureHandler? = null
     var uiDevice: UiDevice? = null
 
     var width = 0
@@ -67,9 +67,9 @@ open class BaseTest {
     private val clearAllNotificationsTextRu = "Очистить"
     private val clearAllNotificationsTextEn = "Clear"
 
-    private lateinit var appContext: Context
-    private lateinit var mInstrumentation: Instrumentation
-    private lateinit var mClipboardManager: ClipboardManager
+    lateinit var appContext: Context
+    lateinit var mInstrumentation: Instrumentation
+    lateinit var mClipboardManager: ClipboardManager
 
     @Before
     fun setUp() {
